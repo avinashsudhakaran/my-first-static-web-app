@@ -5,7 +5,7 @@
         "allowedRoles": ["wooduser"]
       },
       {
-        "route": "/admin/*",
+        "route": "/admin",
         "allowedRoles": ["administrator"]
       },
       {
