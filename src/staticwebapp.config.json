@@ -5,6 +5,10 @@
         "allowedRoles": ["authenticated"]
       },
       {
+        "route": "/testWoodUser",
+        "allowedRoles": ["woodUser"]
+      },
+      {
         "route": "/admin",
         "allowedRoles": ["administrator"]
       },
