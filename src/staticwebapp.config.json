@@ -1,10 +1,6 @@
 {
     "routes": [
       {
-        "route": "/profile",
-        "allowedRoles": ["authenticated"]
-      },
-      {
         "route": "/testWoodUser",
         "allowedRoles": ["woodUser"]
       },
