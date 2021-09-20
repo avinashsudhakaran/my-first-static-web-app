@@ -2,7 +2,7 @@
     "routes": [
       {
         "route": "/testWoodUser.html",
-        "allowedRoles": ["woodUser"]
+        "allowedRoles": ["wooduser"]
       },
       {
         "route": "/admin",
