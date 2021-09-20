@@ -1,7 +1,7 @@
 {
     "routes": [
       {
-        "route": "/testWoodUser",
+        "route": "/testWoodUser.html",
         "allowedRoles": ["woodUser"]
       },
       {
