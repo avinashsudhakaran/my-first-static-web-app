@@ -15,13 +15,13 @@
 <body>
     <main>
         <h1>This is the dashboard.</h1>
-        <button class="btn btn-primary">Click here to access the request form</button>
-        <button class="btn btn-secondary">Click here to access the report form</button>
+        <button class="btn btn-primary" onclick="redirectToRequest()">Click here to access the request form</button>
+        <button class="btn btn-secondary" onclick="redirectToReport()">Click here to access the report form</button>
 
         <br><br>
         <hr>
 
-        <button class="btn btn-secondary">Logout</button>
+        <button class="btn btn-secondary" onclick="location.href='/.auth/logout'">Logout</button>
     </main>
 </body>
 
