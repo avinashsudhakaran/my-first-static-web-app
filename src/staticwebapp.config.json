@@ -13,6 +13,26 @@
             "allowedRoles": ["wooduser"]
         },
         {
+            "route": "/scripts/dashboardcode.js",
+            "allowedRoles": ["administrator"]
+        },
+        {
+            "route": "/scripts/requestformcode.js",
+            "allowedRoles": ["administrator"]
+        },
+        {
+            "route": "/scripts/reportformcode.js",
+            "allowedRoles": ["administrator"]
+        },
+        {
+            "route": "/images",
+            "allowedRoles": ["administrator"]
+        },
+        {
+            "route": "/styles/*",
+            "allowedRoles": ["administrator"]
+        },
+        {
             "route": "/login",
             "rewrite": "/.auth/login/aad"
         },
