@@ -14,7 +14,7 @@ window.onload = (event) => {
         var output = JSON.stringify(dictionary);
         $.ajax({    
             type: "POST",
-            url:"/api/requestFormAPI",
+            url:"/api/requestFormAPI/__init__.py",
             data: output,   
             processData: false,
             contentType: false,  
