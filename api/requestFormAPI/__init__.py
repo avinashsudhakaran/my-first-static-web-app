@@ -5,13 +5,14 @@ import azure.functions as func
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
-    name = req.params.get('name')
-    
+    output = req.get_json()
+    if(output['id'] == '123' & output['key'] == '1800555'):
+        name = "my name jeff"
 
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
     else:
         return func.HttpResponse(
-             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             "Failed",
              status_code=200
         )
