@@ -1,58 +1,42 @@
 {
     "routes": [
-      {
-        "route": "/testWoodUser.html",
-        "allowedRoles": ["wooduser"]
-      },
-      {
-        "route": "/admin",
-        "allowedRoles": ["administrator"]
-      },
-      {
-        "route": "/images/*",
-        "headers": {
-          "cache-control": "must-revalidate, max-age=15770000"
+        {
+            "route": "/dashboard",
+            "allowedRoles": ["wooduser"]
+        },
+        {
+            "route": "/requestform",
+            "allowedRoles": ["workshopuser,wooduser"]
+        },
+        {
+            "route": "/reportform",
+            "allowedRoles": ["wooduser"]
+        },
+        {
+            "route": "/customers/contoso",
+            "allowedRoles": ["administrator", "customers_contoso"]
+        },
+        {
+            "route": "/login",
+            "rewrite": "/.auth/login/aad"
+        },
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": 404
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout"
+        },
+        {
+            "route": "/calendar/*",
+            "rewrite": "/calendar.html"
+        },
+        {
+            "route": "/specials",
+            "redirect": "/deals",
+            "statusCode": 301
         }
-      },
-      {
-        "route": "../api/*",
-        "methods": ["GET"],
-        "allowedRoles": ["registeredusers"]
-      },
-      {
-        "route": "../api/*",
-        "methods": ["PUT", "POST", "PATCH", "DELETE"],
-        "allowedRoles": ["administrator"]
-      },
-      {
-        "route": "../api/*",
-        "allowedRoles": ["authenticated"]
-      },
-      {
-        "route": "/customers/contoso",
-        "allowedRoles": ["administrator", "customers_contoso"]
-      },
-      {
-        "route": "/login",
-        "rewrite": "/.auth/login/aad"
-      },
-      {
-        "route": "/.auth/login/twitter",
-        "statusCode": 404
-      },
-      {
-        "route": "/logout",
-        "redirect": "/.auth/logout"
-      },
-      {
-        "route": "/calendar/*",
-        "rewrite": "/calendar.html"
-      },
-      {
-        "route": "/specials",
-        "redirect": "/deals",
-        "statusCode": 301
-      }
     ],
     "responseOverrides": {
       "400": {
