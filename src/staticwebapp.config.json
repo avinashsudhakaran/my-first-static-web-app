@@ -38,6 +38,16 @@
             "allowedRoles": ["wooduser","workshopuser"]
         },
         {
+            "route": "../api/requestFormAPI",
+            "methods": ["GET","POST"],
+            "allowedRoles": ["wooduser","workshopuser"]
+        },
+        {
+            "route": "../api/reportFormAPI",
+            "methods": ["GET","POST"],
+            "allowedRoles": ["wooduser"]
+        },
+        {
             "route": "/login",
             "rewrite": "/.auth/login/aad"
         },
