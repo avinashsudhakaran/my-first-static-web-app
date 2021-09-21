@@ -2,50 +2,50 @@
     "routes": [
         {
             "route": "/dashboard",
-            "allowedRoles": ["wooduser"]
+            "allowedRoles": ["wooduser","administrator"]
         },
         {
             "route": "/requestform",
-            "allowedRoles": ["workshopuser","wooduser"]
+            "allowedRoles": ["workshopuser","wooduser","administrator"]
         },
         {
             "route": "/reportform",
-            "allowedRoles": ["wooduser"]
+            "allowedRoles": ["wooduser","administrator"]
         },
         {
             "route": "/scripts/dashboardcode.js",
             "methods": ["GET"],
-            "allowedRoles": ["wooduser","workshopuser"]
+            "allowedRoles": ["wooduser","workshopuser","administrator"]
         },
         {
             "route": "/scripts/requestformcode.js",
             "methods": ["GET"],
-            "allowedRoles": ["wooduser","workshopuser"]
+            "allowedRoles": ["wooduser","workshopuser","administrator"]
         },
         {
             "route": "/scripts/reportformcode.js",
             "methods": ["GET"],
-            "allowedRoles": ["wooduser"]
+            "allowedRoles": ["wooduser","administrator"]
         },
         {
             "route": "/images",
             "methods": ["GET"],
-            "allowedRoles": ["wooduser","workshopuser"]
+            "allowedRoles": ["wooduser","workshopuser","administrator"]
         },
         {
             "route": "/styles/*",
             "methods": ["GET"],
-            "allowedRoles": ["wooduser","workshopuser"]
+            "allowedRoles": ["wooduser","workshopuser","administrator"]
         },
         {
             "route": "/api/requestFormAPI",
             "methods": ["GET","POST"],
-            "allowedRoles": ["wooduser","workshopuser"]
+            "allowedRoles": ["wooduser","workshopuser","administrator"]
         },
         {
             "route": "/api/reportFormAPI",
             "methods": ["GET","POST"],
-            "allowedRoles": ["wooduser"]
+            "allowedRoles": ["wooduser","administrator"]
         },
         {
             "route": "/login",
@@ -74,9 +74,6 @@
       "404": {
         "rewrite": "/404.html"
       }
-    },
-    "globalHeaders": {
-      "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
     },
     "mimeTypes": {
       ".json": "text/json"

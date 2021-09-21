@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-  </head>
-  <body>
-    <img src="images/Wood_logo_grey.png" alt="My test image">
-    <br><hr><br>
+    <head>
+        <meta charset="utf-8">
+        <title>My test page</title>
+    </head>
+    <body>
+        <img src="images/Wood_logo_grey.png" alt="My test image">
+        <br><hr><br>
 
-    <button onclick="location.href='/dashboard'"> Go to Dashboard </button>
-    <br><hr><br>
-    <button onclick="location.href='/requestform'"> Go to Request Form</button>
-  </body>
+        <button onclick="location.href='/dashboard'"> Go to Dashboard </button>
+        <br><hr><br>
+        <button onclick="location.href='/requestform'"> Go to Request Form</button>
+
+        <script>
+            async function getUserInfo() {
+                const response = await fetch('/.auth/me');
+                const payload = await response.json();
+                const { clientPrincipal } = payload;
+                return clientPrincipal;
+            }
+
+            console.log(getUserInfo());
+        </script>
+    </body>
 </html>
