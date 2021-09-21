@@ -12,9 +12,12 @@ window.onload = (event) => {
         dictionary['id'] = id;
         dictionary['key'] = key;
         var output = JSON.stringify(dictionary);
+        
+        
+        
         $.ajax({    
             type: "POST",
-            url:"/api/requestFormAPI/__init__.py",
+            url:"/api/requestFormAPI",
             data: output,   
             processData: false,
             contentType: false,  
@@ -24,6 +27,9 @@ window.onload = (event) => {
             }  
         });
 
+
+
+        
     }else{
         console.log("query not found");
     }
