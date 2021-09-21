@@ -13,10 +13,6 @@
             "allowedRoles": ["wooduser"]
         },
         {
-            "route": "/customers/contoso",
-            "allowedRoles": ["administrator", "customers_contoso"]
-        },
-        {
             "route": "/login",
             "rewrite": "/.auth/login/aad"
         },
@@ -27,15 +23,6 @@
         {
             "route": "/logout",
             "redirect": "/.auth/logout"
-        },
-        {
-            "route": "/calendar/*",
-            "rewrite": "/calendar.html"
-        },
-        {
-            "route": "/specials",
-            "redirect": "/deals",
-            "statusCode": 301
         }
     ],
     "responseOverrides": {
