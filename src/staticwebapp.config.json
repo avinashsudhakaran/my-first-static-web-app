@@ -6,7 +6,7 @@
         },
         {
             "route": "/requestform",
-            "allowedRoles": ["workshopuser,wooduser"]
+            "allowedRoles": ["workshopuser","wooduser"]
         },
         {
             "route": "/reportform",
