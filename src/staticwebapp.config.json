@@ -14,23 +14,28 @@
         },
         {
             "route": "/scripts/dashboardcode.js",
-            "allowedRoles": ["administrator"]
+            "methods": ["GET"],
+            "allowedRoles": ["wooduser","workshopuser"]
         },
         {
             "route": "/scripts/requestformcode.js",
-            "allowedRoles": ["administrator"]
+            "methods": ["GET"],
+            "allowedRoles": ["wooduser","workshopuser"]
         },
         {
             "route": "/scripts/reportformcode.js",
-            "allowedRoles": ["administrator"]
+            "methods": ["GET"],
+            "allowedRoles": ["wooduser"]
         },
         {
             "route": "/images",
-            "allowedRoles": ["administrator"]
+            "methods": ["GET"],
+            "allowedRoles": ["wooduser","workshopuser"]
         },
         {
             "route": "/styles/*",
-            "allowedRoles": ["administrator"]
+            "methods": ["GET"],
+            "allowedRoles": ["wooduser","workshopuser"]
         },
         {
             "route": "/login",
