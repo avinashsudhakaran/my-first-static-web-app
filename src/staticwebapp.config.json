@@ -38,12 +38,12 @@
             "allowedRoles": ["wooduser","workshopuser"]
         },
         {
-            "route": "../api/requestFormAPI",
+            "route": "/api/requestFormAPI",
             "methods": ["GET","POST"],
             "allowedRoles": ["wooduser","workshopuser"]
         },
         {
-            "route": "../api/reportFormAPI",
+            "route": "/api/reportFormAPI",
             "methods": ["GET","POST"],
             "allowedRoles": ["wooduser"]
         },
